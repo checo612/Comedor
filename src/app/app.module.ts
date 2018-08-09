@@ -39,9 +39,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     PedidoOrdenComponent,
     PlatilloComponent,
     MisOrdenesComponent,
-    MiOrdenComponent,
     ChefOrdenesComponent,
-    ChefOrdenComponent,
     NavbarComponent
   ],
   imports: [
