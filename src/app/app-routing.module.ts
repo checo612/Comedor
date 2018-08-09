@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MisOrdenesComponent } from './components/mis-ordenes/mis-ordenes.component';
+import { LoginComponent } from './pages/login/login.component';
+import { MiOrdenComponent } from './components/mis-ordenes/mi-orden/mi-orden.component';
 
 const routes: Routes = [
-  {path: 'miOrden',
-  pathMatch: 'full',
-  component: MisOrdenesComponent}];
+  { path: '', component: MiOrdenComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
