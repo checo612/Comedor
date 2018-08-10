@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,  } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '../../node_modules/@angular/forms';
@@ -17,10 +17,10 @@ import { MenuComponent } from './components/pedidos/menu/menu.component';
 import { PedidoOrdenComponent } from './components/pedidos/pedido-orden/pedido-orden.component';
 import { PlatilloComponent } from './components/pedidos/platillo/platillo.component';
 import { MisOrdenesComponent } from './components/mis-ordenes/mis-ordenes.component';
-
 import { ChefOrdenesComponent } from './components/chef-ordenes/chef-ordenes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ConfirmarComponent } from './components/pedidos/confirmar/confirmar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     PlatilloComponent,
     MisOrdenesComponent,
     ChefOrdenesComponent,
-    NavbarComponent
+    NavbarComponent,
+    ConfirmarComponent,
+
   ],
   imports: [
     BrowserModule,

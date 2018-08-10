@@ -1,0 +1,17 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="container p-3">
+        <form>
+            <div class="form-group">
+                <h3>¿Esta seguro de completar la orden?</h3>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" (click)="registrar(); c('Save click')">Confirmar</button>
+                <button type="button" class="ml-3 btn btn-default" (click)=" c('Save click')">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</ng-template>
+
+<button class="btn btn-success mt-4 btn-block" (click)="abrir()">Confirmar orden</button>
+
+

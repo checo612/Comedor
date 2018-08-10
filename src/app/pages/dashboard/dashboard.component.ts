@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosService } from '../../services/usuarios/usuarios.service';
+import { Observable } from 'rxjs';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,13 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _usuarios: UsuariosService, private _auth: AuthService) { }
 
   ngOnInit() {
   }
 
-  mostrarPlatillos(platillo) {
-    console.log('si');
-  }
 
 }

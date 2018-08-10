@@ -1,7 +1,10 @@
 <ul class="list-group">
   <li class="list-group-item  text-center bg-light">Mi orden</li>
-  <li *ngFor="let platillo of obtenerPlatillos()" class="list-group-item text-capitalize">{{platillo.nombre}}
-    <button class="float-right btn btn-danger" (click)="removePlatillo(platillo)">X</button>
+  <li *ngFor="let platillo of obtenerPlatillos()" class="list-group-item text-capitalize">
+    <span class="m-auto">{{platillo.nombre}}</span>
+    <button class="float-right btn btn-danger" (click)="removePlatillo(platillo)">
+      <i class="fas fa-trash"></i>
+    </button>
   </li>
 </ul>
-<button class="btn btn-success btn-block mt-3" (click)="registraOrden()" *ngIf="obtenerPlatillos()?.length >= 1">Enviar</button>
+<app-confirmar [platillos]="obtenerPlatillos()" *ngIf="obtenerPlatillos()?.length >= 1"></app-confirmar>

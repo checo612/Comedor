@@ -10,7 +10,6 @@ import { Orden } from '../../../models/orden/orden.model';
   styleUrls: ['./pedido-orden.component.css']
 })
 export class PedidoOrdenComponent implements OnInit, OnChanges {
-  // @Input('platillos') platillos;
   private listaOrden;
 
   constructor(
@@ -29,8 +28,10 @@ export class PedidoOrdenComponent implements OnInit, OnChanges {
     this.ordenService.removePlatillo(platillo);
   }
 
+  /* Cambio funcion a modal confirmar
   registraOrden() {
     this.ordenService.addOrden(this.obtenerPlatillos());
-    this._router.navigate(['/dashboard']);
+    this._router.navigate(['/dashboard/platillos']);
   }
+  */
 }

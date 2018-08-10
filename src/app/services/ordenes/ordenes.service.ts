@@ -41,7 +41,9 @@ export class OrdenesService {
 
   addOrden(orden) {
     this.ordenCompleta = { estatus: true, platillos: orden };
-    return this.listaOrdenes.push(this.ordenCompleta);
+    return this.listaOrdenes.push(this.ordenCompleta).then(x => {
+      this.ordenPlatillos = [];
+    });
     // return this.listaPlatillos.push(this.platillos);
   }
 

@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit() {
   }
+  // configuracion para el carrusel
   confuguracionCarrusel() {
     this.config.interval = 500;
     this.config.wrap = false;
@@ -37,10 +38,11 @@ export class LoginComponent implements OnInit {
     this.config.pauseOnHover = false;
     this.config.showNavigationArrows = false;
   }
+  // cambia la pantalla entre el login y el registro
   cambio() {
     this.login = !this.login;
   }
-
+  // inicion de secion
   iniciarSesion() {
     if (!this.email || !this.password) {
       this.error = 'Por favor valida que hayas llenado todos los campos';
@@ -54,7 +56,7 @@ export class LoginComponent implements OnInit {
       this.error = 'Ocurrió un error al iniciar sesión, por favor valida tus credenciales y vuelve a intentar';
     }).then(() => this.procesando = false);
   }
-
+  // crear nuevo registro
   crearCuenta() {
     if (!this.email || !this.password || !this.name) {
       this.error = 'Por favor valida que hayas llenado todos los campos';
