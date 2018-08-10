@@ -1,7 +1,7 @@
 <ul class="list-group">
   <li class="list-group-item  text-center bg-light">Mi orden</li>
   <li *ngFor="let platillo of obtenerPlatillos()" class="list-group-item text-capitalize">
-    <span class="m-auto">{{platillo.nombre}}</span>
+    <span class="pt-auto pb-auto">{{platillo.nombre}}</span>
     <button class="float-right btn btn-danger" (click)="removePlatillo(platillo)">
       <i class="fas fa-trash"></i>
     </button>
