@@ -11,7 +11,6 @@ import { UsuariosService } from '../../services/usuarios/usuarios.service';
 export class ChefOrdenesComponent implements OnInit {
   public ordenesList: Array<any> = [];
   public estatus: boolean;
-  p = 1;
 
   constructor(private _usuarios: UsuariosService) { }
 

@@ -5,7 +5,7 @@
         <i class="fas fa-utensils"></i>
       </div>
       <div class="col ml-5">
-        <h4 class="text-center">Pedido: {{i + 1}}</h4>
+        <h4 class="text-center">Orden: {{i + 1}}</h4>
         <h4>Platillos:</h4>
         <div *ngFor="let plato of orden.platillos">
           <h5 class="mb-0 ml-3">{{plato.nombre}}</h5>
@@ -17,6 +17,4 @@
       </div>
     </div>
   </div>
-  <!-- <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="">
-  </pagination-controls> -->
 </div>
