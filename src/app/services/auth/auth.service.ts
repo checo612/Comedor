@@ -37,8 +37,10 @@ export class AuthService implements CanActivate {
 
   }
 
-  crearCuenta(email: string, password: string) {
-    return this._fireAuth.auth.createUserWithEmailAndPassword(email, password);
+  crearCuenta(email: string, password: string, name: string) {
+    return this._fireAuth.auth.createUserWithEmailAndPassword(email, password).then((usuario: firebase.auth.UserCredential) => {
+      return this._usuarios.agregarNombreUsuario(usuario.user, name);
+    });
   }
 
   cerrarSesion(usuario) {
