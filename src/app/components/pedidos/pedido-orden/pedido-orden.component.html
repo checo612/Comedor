@@ -1,9 +1,7 @@
-
 <ul class="list-group">
-  <li *ngFor="let platillo of platillos" class="list-group-item">{{platillo}}
-    <button (click)="removePlatillo(platillo)">no</button>
+  <li class="list-group-item  text-center bg-light">Mi orden</li>
+  <li *ngFor="let platillo of obtenerPlatillos()" class="list-group-item text-capitalize">{{platillo.nombre}}
+    <button class="float-right btn btn-danger" (click)="removePlatillo(platillo)">X</button>
   </li>
 </ul>
-<button 
-  (click)="registraOrden()"
-  *ngIf="platillos?.length >= 1">Enviar</button>
+<button class="btn btn-success btn-block mt-3" (click)="registraOrden()" *ngIf="obtenerPlatillos()?.length >= 1">Enviar</button>

@@ -1,11 +1,12 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-9">
+    <div class="col-md-9 col-xs-12">
+      <div class="container-fluid">
       <div class="row">
-      <app-menu (enviaPlatillo)="mostrarPlatillos($event)" 
-          class="col-3 pt-4" 
+      <app-menu 
+          class=" card-deck col-md-3 col-xs-12 pt-4" 
           *ngFor="let platillo of platillos  | paginate: { itemsPerPage: 8, currentPage: p}" 
-          [platillo]="platillo"></app-menu>
+          [platillo]="platillo"></app-menu></div>
       </div>
       <div class="row text-center">
         <div class="col pt-5">
@@ -17,8 +18,8 @@
     </div>
       </div>
     </div>
-    <div class="col-3">
-      <app-pedido-orden [platillos]="platillosSeleccionados"></app-pedido-orden>
+    <div class="col-md-3 col-xs-12 pt-4">
+      <app-pedido-orden></app-pedido-orden>
     </div>
   </div>
 </div>

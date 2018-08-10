@@ -1,10 +1,8 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, ChangeDetectionStrategy } from '@angular/core';
 import { OrdenesService } from '../../../services/ordenes/ordenes.service';
 import { Platillo } from '../../../models/platillo/platillo.model';
 import { Router } from '../../../../../node_modules/@angular/router';
 import { Orden } from '../../../models/orden/orden.model';
-
-const listaPlatillos: Array<Platillo> = [];
 
 @Component({
   selector: 'app-pedido-orden',
@@ -12,33 +10,27 @@ const listaPlatillos: Array<Platillo> = [];
   styleUrls: ['./pedido-orden.component.css']
 })
 export class PedidoOrdenComponent implements OnInit, OnChanges {
-  @Input('platillos') platillos;
-
-  // public listaPlatillos: Array<Orden>;
+  // @Input('platillos') platillos;
+  private listaOrden;
 
   constructor(
     private ordenService: OrdenesService,
     private _router: Router) { }
 
-  ngOnInit() {
-    console.log(this.platillos);
-  }
+  ngOnInit() {}
 
-  ngOnChanges() {
-    listaPlatillos.push(this.platillos);
-    console.log(listaPlatillos);
+  ngOnChanges() {}
 
-  }
-
-  registraOrden() {
-    this.ordenService.addOrden(this.platillos);
-    this._router.navigate(['/']);
+  obtenerPlatillos() {
+    return this.ordenService.getOrden();
   }
 
   removePlatillo(platillo) {
-
+    this.ordenService.removePlatillo(platillo);
   }
 
-
-
+  registraOrden() {
+    this.ordenService.addOrden(this.obtenerPlatillos());
+    this._router.navigate(['/dashboard']);
+  }
 }
