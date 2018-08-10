@@ -5,7 +5,7 @@
 }
 
 .rowPedidoChef{
-    border: 2px solid red;
+    border: 2px solid #28a74585;
     border-radius: 10px;
     background-color: #0000ff08;
     min-height: 157px;
@@ -17,4 +17,3 @@
     top: 45px;
     font-size: 75px;
 }
-
