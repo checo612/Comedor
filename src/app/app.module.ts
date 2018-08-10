@@ -28,6 +28,7 @@ import { MisOrdenesComponent } from './components/mis-ordenes/mis-ordenes.compon
 
 import { ChefOrdenesComponent } from './components/chef-ordenes/chef-ordenes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { StatusOrdenPipe } from './pipes/status-orden.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     PlatilloComponent,
     MisOrdenesComponent,
     ChefOrdenesComponent,
-    NavbarComponent
+    NavbarComponent,
+    StatusOrdenPipe
   ],
   imports: [
     BrowserModule,
