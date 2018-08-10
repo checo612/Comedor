@@ -1,13 +1,16 @@
 <div class="card ">
   <ul class="list-group list-group-flush text-left">
-      <h4 class="card-header bg-success" > {{orden.estatus}}</h4>
+      <h4 class="card-header bg-success " *ngIf="orden.estatus === false; else nocompletada"> Completada <i class="far fa-check-circle"></i></h4>
     <div *ngFor="let platillo of orden.platillos  ">
-      <li  class="list-group-item "> 
+      <li  class="list-group-item" > 
         <img class="imagen-size" src="{{platillo.imagen}}">
-        <span> {{platillo.nombre}}</span>
+        <span class="pl-4" style="font-size: 25px"> {{platillo.nombre}}</span>
       </li>
     </div>
   </ul>
 </div>
 <hr>
-<!-- *ngIf="{{orden.estatus}}" -->
+
+<ng-template #nocompletada>
+    <h4 class="card-header bg-danger ">No Completada <i class="fas fa-times"></i> </h4>
+</ng-template>

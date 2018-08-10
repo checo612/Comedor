@@ -1,8 +1,4 @@
-.btn.btn-lg.btn-success{
-    left: 15px;
-    position: relative;
-    top:66px;
-}
+
 
 .rowPedidoChef{
     border: 2px solid #28a74585;
@@ -11,9 +7,3 @@
     min-height: 157px;
 }
 
-.fas.fa-utensils{
-    left:10px;
-    position: relative;
-    top: 45px;
-    font-size: 75px;
-}

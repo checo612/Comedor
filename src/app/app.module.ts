@@ -19,11 +19,10 @@ import { PlatilloComponent } from './components/pedidos/platillo/platillo.compon
 import { MisOrdenesComponent } from './components/mis-ordenes/mis-ordenes.component';
 import { ChefOrdenesComponent } from './components/chef-ordenes/chef-ordenes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { StatusOrdenPipe } from './pipes/status-orden.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ConfirmarComponent } from './components/pedidos/confirmar/confirmar.component';
 import { MiOrdenComponent } from './components/mis-ordenes/mi-orden/mi-orden.component';
-import { OrdenPipe } from './pipe/orden/orden.pipe';
+
 
 @NgModule({
   declarations: [
@@ -37,10 +36,8 @@ import { OrdenPipe } from './pipe/orden/orden.pipe';
     MisOrdenesComponent,
     ChefOrdenesComponent,
     NavbarComponent,
-    StatusOrdenPipe,
     ConfirmarComponent,
-    MiOrdenComponent,
-    OrdenPipe
+    MiOrdenComponent
   ],
   imports: [
     BrowserModule,

@@ -10,12 +10,10 @@ import { AuthService } from '../../../services/auth/auth.service';
 export class MiOrdenComponent implements OnInit {
   @Input('orden') orden: Array<any>;  // Orden;
   // ordenes: any;
-
+  estatus;
   constructor(private ordenService: OrdenService, private _auth: AuthService) { }
 
   ngOnInit() {
-    console.log(this.orden);
-    console.log(this.orden);
       // this.ordenes = this.ordenService.getMisOrdenes();
   }
 

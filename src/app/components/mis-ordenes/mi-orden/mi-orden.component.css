@@ -2,12 +2,8 @@
     width: 75px
 }
 
-.bgcomplete{
-    background-color: green;
-}
-
-.bgincomplete{
-
+li{
+    background-color: #c6ece6
 }
 
 h4{
