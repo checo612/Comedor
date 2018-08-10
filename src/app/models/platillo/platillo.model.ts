@@ -1,5 +1,5 @@
 export interface Platillo {
-    uid: string;
+    key?: string;
     nombre: string;
     imagen: string;
     descripcion: string;

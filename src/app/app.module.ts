@@ -20,6 +20,7 @@ import { MisOrdenesComponent } from './components/mis-ordenes/mis-ordenes.compon
 
 import { ChefOrdenesComponent } from './components/chef-ordenes/chef-ordenes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     AppRoutingModule,
     NgbModule.forRoot(),
     FormsModule,

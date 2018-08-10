@@ -1,3 +1,58 @@
-<p>
-  login works!
-</p>
+<div class="login-block full">
+  <div class="container mt-auto mb-auto">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-6">
+            <button type="submit" class="mt-1 btn-block btn btn-light" [disabled]="login === true" (click)="cambio()">Login</button>
+          </div>
+          <div class="col-6">
+            <button type="submit" class="mt-1 btn-block btn btn-light" [disabled]="login === false" (click)="cambio()">create</button>
+          </div>
+        </div>
+        <div class="login-sec">
+          <h2 class="text-center" *ngIf="login; else createtitle">Login Now</h2>
+          <ng-template #createtitle>
+            <h2 class="text-center">Create</h2>
+          </ng-template>
+          <form class="login-form">
+            <div class="form-group" *ngIf="!login;">
+              <label for="exampleInputPassword1" class="text-uppercase">Name</label>
+              <input type="text" class="form-control" name="name" placeholder="" [(ngModel)]="name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="text-uppercase">Email</label>
+              <input type="email" class="form-control" name="email" placeholder="" [(ngModel)]="email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="" [(ngModel)]="password">
+            </div>
+            <div class="text-center" *ngIf="login; else createbtn">
+              <button type="submit" class="btn  btn-block btn-primary" (click)="iniciarSesion()">Login</button>
+            </div>
+            <ng-template #createbtn>
+              <div class="text-center">
+                <button type="submit" class="btn  btn-block btn-primary" (click)="crearCuenta()">Create</button>
+              </div>
+            </ng-template>
+          </form>
+        </div>
+        <div class="col-12 mt-0" *ngIf="error">
+          <div class="alert alert-danger">
+            <small>{{error}}</small>
+          </div>
+        </div>
+      </div>
+      <!-- Carrusel -->
+      <div class="col-md-8 banner-sec">
+        <ngb-carousel class="carousel slide">
+          <ng-template class=" carousel-inner " *ngFor="let img of images" ngbSlide>
+            <img class=" img-fluid" [src]="img" alt="Random first slide">
+          </ng-template>
+        </ngb-carousel>
+      </div>
+      <!-- fin carrusel -->
+    </div>
+  </div>
+</div>

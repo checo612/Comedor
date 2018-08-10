@@ -1,3 +1,9 @@
-<p>
-  {{platillo?.nombre}}
-</p>
+
+<ul class="list-group">
+  <li *ngFor="let platillo of platillos" class="list-group-item">{{platillo}}
+    <button (click)="removePlatillo(platillo)">no</button>
+  </li>
+</ul>
+<button 
+  (click)="registraOrden()"
+  *ngIf="platillos?.length >= 1">Enviar</button>

@@ -7,7 +7,8 @@ import { Platillo } from '../../models/platillo/platillo.model';
   styleUrls: ['./pedidos.component.css']
 })
 export class PedidosComponent implements OnInit {
-  enviaPlatillo: any;
+  platillosSeleccionados: any;
+
   platillos = [
     {uid: 1, nombre: 'arroz1', imagen: 'https://cocina-casera.com/mx/wp-content/uploads/2017/09/sopa-de-arroz-blanco-con-verduras.jpg', descripcion: ''},
     {uid: 2, nombre: 'arroz2', imagen: 'https://cocina-casera.com/mx/wp-content/uploads/2017/09/sopa-de-arroz-blanco-con-verduras.jpg', descripcion: ''},
@@ -20,11 +21,12 @@ export class PedidosComponent implements OnInit {
     {uid: 9, nombre: 'arroz9', imagen: 'https://cocina-casera.com/mx/wp-content/uploads/2017/09/sopa-de-arroz-blanco-con-verduras.jpg', descripcion: ''},
     {uid: 10, nombre: 'arroz10', imagen: 'https://cocina-casera.com/mx/wp-content/uploads/2017/09/sopa-de-arroz-blanco-con-verduras.jpg', descripcion: ''}
   ];
-  constructor() { }
 
+  constructor() { }
+  p = 1;
   mostrarPlatillos(platillo) {
-    console.log('si');
-    this.enviaPlatillo = platillo;
+    // console.log(platillo);
+    this.platillosSeleccionados = platillo;
   }
 
   ngOnInit() {
