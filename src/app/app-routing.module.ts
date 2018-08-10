@@ -4,12 +4,22 @@ import { MenuComponent } from './components/pedidos/menu/menu.component';
 import { MisOrdenesComponent } from './components/mis-ordenes/mis-ordenes.component';
 import { ChefOrdenesComponent } from './components/chef-ordenes/chef-ordenes.component';
 import { LoginComponent } from './pages/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthService } from './services/auth/auth.service';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'menu' , component: MenuComponent},
-  { path: 'mis_pedidos' , component: MisOrdenesComponent },
-  { path: 'listado_ordenes', component: ChefOrdenesComponent }
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard/home', canActivate: [AuthService] },
+  {
+    path: 'dashboard', component: DashboardComponent,
+    children: [
+      { path: 'home', component: PedidosComponent, canActivate: [AuthService] },
+      { path: 'chef-ordenes', component: ChefOrdenesComponent, canActivate: [AuthService] },
+      { path: 'mis-ordenes', component: MisOrdenesComponent, canActivate: [AuthService] }
+    ]
+  },
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: 'dashboard/home', canActivate: [AuthService] }
 ];
 
 @NgModule({

@@ -1,3 +1,10 @@
-<p>
-  pedido-orden works!
-</p>
+<ul class="list-group">
+  <li class="list-group-item  text-center bg-light">Mi orden</li>
+  <li *ngFor="let platillo of obtenerPlatillos()" class="list-group-item text-capitalize">
+    <span class="m-auto">{{platillo.nombre}}</span>
+    <button class="float-right btn btn-danger" (click)="removePlatillo(platillo)">
+      <i class="fas fa-trash"></i>
+    </button>
+  </li>
+</ul>
+<app-confirmar [platillos]="obtenerPlatillos()" *ngIf="obtenerPlatillos()?.length >= 1"></app-confirmar>

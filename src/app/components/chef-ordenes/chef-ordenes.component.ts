@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from '../../services/usuarios/usuarios.service';
-import { Orden } from '../../models/orden';
-import { AngularFireList } from '../../../../node_modules/angularfire2/database';
-import { Observable } from '../../../../node_modules/rxjs';
-import { access, accessSync } from 'fs';
-import { element } from '../../../../node_modules/@angular/core/src/render3/instructions';
+
 
 @Component({
   selector: 'app-chef-ordenes',
