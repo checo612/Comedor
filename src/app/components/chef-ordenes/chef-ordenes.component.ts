@@ -11,6 +11,7 @@ import { UsuariosService } from '../../services/usuarios/usuarios.service';
 export class ChefOrdenesComponent implements OnInit {
   public ordenesList: Array<any> = [];
   public estatus: boolean;
+  p = 1;
 
   constructor(private _usuarios: UsuariosService) { }
 
@@ -23,8 +24,12 @@ export class ChefOrdenesComponent implements OnInit {
     console.log('ordenesList', this.ordenesList);
   }
 
-  terminado(uid) {
-    console.log(uid);
+  terminado(orden) {
+    orden.estatus = false;
+    this._usuarios.actualizarEstatus(orden);
+    console.log('ordenid ' + orden.ordenId);
+    console.log('userid ' + orden.userId);
+
   }
 
 

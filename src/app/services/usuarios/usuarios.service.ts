@@ -37,9 +37,10 @@ export class UsuariosService {
       );
   }
 
-  ordenTerminada(ordenid) {
-    alert('');
-    console.log('terminada');
+  actualizarEstatus(orden) {
+    return this._firebase.object(`${'ordenes'}/${orden.userId}/${orden.ordenId}`).update({
+      estatus: orden.estatus
+    });
   }
 
   agregarNombreUsuario(usuario, name) {
@@ -52,6 +53,7 @@ export class UsuariosService {
       });
     }
   }
+
   getUsuarios() {
     return this._firebase.list(`${lista}`).snapshotChanges().pipe(
       map(changes => {
