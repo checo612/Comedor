@@ -37,8 +37,7 @@ import { MiOrdenComponent } from './components/mis-ordenes/mi-orden/mi-orden.com
     ChefOrdenesComponent,
     NavbarComponent,
     ConfirmarComponent,
-    MiOrdenComponent,
-
+    MiOrdenComponent
   ],
   imports: [
     BrowserModule,

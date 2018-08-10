@@ -23,8 +23,12 @@ export class ChefOrdenesComponent implements OnInit {
     console.log('ordenesList', this.ordenesList);
   }
 
-  terminado(uid) {
-    console.log(uid);
+  terminado(orden) {
+    orden.estatus = false;
+    this._usuarios.actualizarEstatus(orden);
+    console.log('ordenid ' + orden.ordenId);
+    console.log('userid ' + orden.userId);
+
   }
 
 

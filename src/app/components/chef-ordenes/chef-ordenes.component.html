@@ -1,21 +1,20 @@
 <div class="container">
-  <div class="row my-3 rowPedidoChef" *ngFor="let orden of ordenesList; let i = index"  >
-    <div class="col-1">
-      <i class="fas fa-utensils"></i>
-    </div>
-    <div class="col">
-
-      <h3>Pedido: {{i + 1}}</h3>
-      <h3>Platillo:</h3>
-      <div *ngFor="let plato of orden.platillos" >
-        <h5 class="mb-0 ml-3">{{plato.nombre}}</h5>
-        <p class="ml-3">{{plato.descripcion}}</p>
+  <div *ngFor="let orden of ordenesList; let i = index;">
+    <div class="row my-3 rowPedidoChef" *ngIf="orden.estatus === true">
+      <div class="col-1">
+        <i class="fas fa-utensils"></i>
+      </div>
+      <div class="col ml-5">
+        <h4 class="text-center">Orden: {{i + 1}}</h4>
+        <h4>Platillos:</h4>
+        <div *ngFor="let plato of orden.platillos">
+          <h5 class="mb-0 ml-3">{{plato.nombre}}</h5>
+          <p class="ml-3">{{plato.descripcion}}</p>
+        </div>
+      </div>
+      <div class="col-2">
+        <button class="btn btn-lg btn-success" (click)="terminado(orden);">Terminado</button>
       </div>
     </div>
-    <div class="col-2">
-      <button class="btn btn-lg btn-success" (click)="terminado();">Terminado</button>
-    </div>
   </div>
-
-
 </div>
