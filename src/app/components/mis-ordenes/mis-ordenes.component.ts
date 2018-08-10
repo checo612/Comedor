@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mis-ordenes',
@@ -6,7 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mis-ordenes.component.css']
 })
 export class MisOrdenesComponent implements OnInit {
+  @Input('uid') uid: string;
 
+  public ordenes: Array <any> = [
+    { uid: '',
+      estatus: '',
+      platillos: [{
+        platillo: 'Lasaña',
+        cantidad: ''
+      }]
+
+  }
+];
   constructor() { }
 
   ngOnInit() {
