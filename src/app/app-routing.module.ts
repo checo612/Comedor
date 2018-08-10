@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MenuComponent } from './components/pedidos/menu/menu.component';
+import { MisOrdenesComponent } from './components/mis-ordenes/mis-ordenes.component';
+import { ChefOrdenesComponent } from './components/chef-ordenes/chef-ordenes.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthService } from './services/auth/auth.service';
-import { ChefOrdenesComponent } from './components/chef-ordenes/chef-ordenes.component';
-import { MisOrdenesComponent } from './components/mis-ordenes/mis-ordenes.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 const routes: Routes = [

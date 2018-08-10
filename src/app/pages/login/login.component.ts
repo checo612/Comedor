@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
     }
     this.procesando = true;
     this._auth.iniciarSesion(this.email, this.password).then(() => {
-      this._router.navigate(['/dashboard']);
+      this._router.navigate(['/dashboard/home']);
     }).catch(err => {
       console.error(err);
       this.error = 'Ocurrió un error al iniciar sesión, por favor valida tus credenciales y vuelve a intentar';
@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
     }
     this.procesando = true;
     this._auth.crearCuenta(this.email, this.password, this.name).then(() => {
-      this._router.navigate(['/dashboard']);
+      this._router.navigate(['/dashboard/home']);
     }).catch(err => {
       console.log(err);
       this.error = 'Ocurrió un error al registrar tu cuenta, por favor valida la información y vuelve a intentarlo';
