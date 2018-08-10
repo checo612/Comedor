@@ -1,0 +1,13 @@
+<div class="card ">
+  <ul class="list-group list-group-flush text-left">
+      <h4 class="card-header bg-success" > {{orden.estatus}}</h4>
+    <div *ngFor="let platillo of orden.platillos  ">
+      <li  class="list-group-item "> 
+        <img class="imagen-size" src="{{platillo.imagen}}">
+        <span> {{platillo.nombre}}</span>
+      </li>
+    </div>
+  </ul>
+</div>
+<hr>
+<!-- *ngIf="{{orden.estatus}}" -->

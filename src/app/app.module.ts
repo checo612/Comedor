@@ -21,6 +21,8 @@ import { ChefOrdenesComponent } from './components/chef-ordenes/chef-ordenes.com
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ConfirmarComponent } from './components/pedidos/confirmar/confirmar.component';
+import { MiOrdenComponent } from './components/mis-ordenes/mi-orden/mi-orden.component';
+import { OrdenPipe } from './pipe/orden/orden.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { ConfirmarComponent } from './components/pedidos/confirmar/confirmar.com
     ChefOrdenesComponent,
     NavbarComponent,
     ConfirmarComponent,
-
+    MiOrdenComponent,
+    OrdenPipe
   ],
   imports: [
     BrowserModule,
