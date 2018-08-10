@@ -1,3 +1,12 @@
-<p>
-  menu works!
-</p>
+<div class="card">
+  <img class="card-img-top" [src]=platillo.imagen style="max-width: 20px;">
+  <div class="card-body">
+    <h5 class="card-title">{{platillo.nombre}}</h5>
+    <p class="card-text">{{platillo.descripcion}}</p>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary" 
+      (click)="agregarPlatillo()"
+      >Agregar</button>
+  </div>
+</div>

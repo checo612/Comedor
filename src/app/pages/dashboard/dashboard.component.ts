@@ -12,4 +12,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+  mostrarPlatillos(platillo) {
+    console.log('si');
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pedido-orden',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pedido-orden.component.css']
 })
 export class PedidoOrdenComponent implements OnInit {
+  @Input('platillo') platillo;
 
   constructor() { }
 

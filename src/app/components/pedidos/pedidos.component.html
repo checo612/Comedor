@@ -1,3 +1,14 @@
-<p>
-  pedidos works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+      <app-menu (enviaPlatillo)="mostrarPlatillos($event)" 
+          class="col-3 pt-4" 
+          *ngFor="let platillo of platillos" 
+          [platillo]="platillo"></app-menu></div>
+    </div>
+    <div class="col-3">
+      <app-pedido-orden [platillo]="enviaPlatillo"></app-pedido-orden>
+    </div>
+  </div>
+</div>
