@@ -27,9 +27,20 @@ import {
 export class AuthService implements CanActivate {
   public usuario: Observable<firebase.User>;
   private _uid: string;
+  nombreUsuario;
 
-  constructor(private _fireAuth: AngularFireAuth, private _router: Router, private _usuarios: UsuariosService) {
+  constructor(
+    private _fireAuth: AngularFireAuth,
+    private _router: Router,
+    private _usuarios: UsuariosService
+  ) {
     this.usuario = this._fireAuth.authState;
+  }
+
+  getUsuario() {
+    return this.usuario.subscribe(usuario => {
+      this.nombreUsuario = usuario.email;
+    });
   }
 
   iniciarSesion(email: string, password: string) {
@@ -43,7 +54,10 @@ export class AuthService implements CanActivate {
     });
   }
 
-  cerrarSesion(usuario) {
+  cerrarSesion() {
+    return this._fireAuth.auth.signOut().then(() => {
+      this._router.navigate(['/login']);
+    });
   }
 
   canActivate() {
