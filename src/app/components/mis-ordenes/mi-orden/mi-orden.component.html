@@ -1,6 +1,6 @@
 <div class="card ">
   <ul class="list-group list-group-flush text-left">
-      <h4 class="card-header bg-success " *ngIf="orden.estatus === true; else nocompletada"> Completada <i class="far fa-check-circle"></i></h4>
+      <h4 class="card-header bg-success " *ngIf="orden.estatus === false; else nocompletada"> Completada <i class="far fa-check-circle"></i></h4>
     <div *ngFor="let platillo of orden.platillos  ">
       <li  class="list-group-item" > 
         <img class="imagen-size" src="{{platillo.imagen}}">
