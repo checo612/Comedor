@@ -3,11 +3,11 @@
     width:100%;
     padding:32px 0;
     }
-    .banner-sec{background:url(https://dcf54aygx3v5e.cloudfront.net/35c5f64e-d137-45e8-a1e4-83d0cf1e97fb/5d7a2c42-7ca5-44d6-b385-9e801cacdd3d.jpg)  no-repeat left bottom; background-size:cover; min-height:500px;  border-radius: 0 10px 10px 0; padding:0;}
+    .banner-sec{background:url(https://dcf54aygx3v5e.cloudfront.net/35c5f64e-d137-45e8-a1e4-83d0cf1e97fb/5d7a2c42-7ca5-44d6-b385-9e801cacdd3d.jpg)  no-repeat left bottom; background-size:cover; border-radius: 0 10px 10px 0; padding:0;}
     .container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
     .carousel-inner{border-radius:0 10px 10px 0;}
     .carousel-caption{text-align:left; left:5%;}
-    .login-sec{padding: 50px 30px; position:relative;
+    .login-sec{padding: 30px 30px 10px 30px; position:relative;
     }
     .login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
     .login-sec .copy-text i{color:#FEB58A;}
