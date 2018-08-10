@@ -52,12 +52,12 @@ export class AuthService implements CanActivate {
         if (usuario) {
           return true;
         } else {
-          this._router.navigate(['/acceso']);
-          return false;
+          this._router.navigate(['/login']);
+          return true;
         }
       }),
       catchError((err) => {
-        this._router.navigate(['/acceso']);
+        this._router.navigate(['/login']);
         return of(false);
       })
     );
