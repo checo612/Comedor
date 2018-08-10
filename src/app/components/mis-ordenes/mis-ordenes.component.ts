@@ -22,6 +22,7 @@ export class MisOrdenesComponent implements OnInit, OnChanges {
     this.ordenService.getMisOrdenes().subscribe(datos => {
       datos.subscribe(valores => {
         this.ordenes = valores;
+        this.ordenes.reverse();
       });
     });
   }
